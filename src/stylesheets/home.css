@@ -1,179 +1,144 @@
-.App{
-    background-color: cornflowerblue;
-    width: 100%;
-    height: 795px;
-}
-
-.buttons{
-    display: flex;
-    flex-direction: column;
-}
-
-.btn1{
-  margin-top: 250px;
-  background-color: #fff;
-  border: 0 solid #e2e8f0;
-  border-radius: 1.5rem;
-  box-sizing: border-box;
-  color: #0d172a;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 1rem 1.6rem;
-  text-align: center;
-  text-decoration: none #0d172a solid;
-  text-decoration-thickness: auto;
-  transition: all .1s cubic-bezier(.4, 0, .2, 1);
-  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 45%;
-  margin-left: 30%;
-}
-
-.btn1:hover{
-  background-color: #1e293b;
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .btn1 {
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
-  }
-}
-
-.btn2{
-    margin-top: 20px;
-    background-color: #fff;
-    border: 0 solid #e2e8f0;
-    border-radius: 1.5rem;
-    box-sizing: border-box;
-    color: #0d172a;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1;
-    padding: 1rem 1.6rem;
-    text-align: center;
-    text-decoration: none #0d172a solid;
-    text-decoration-thickness: auto;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 45%;
-    margin-left: 30%;
-  }
-  
-  .btn2:hover{
-    background-color: #1e293b;
-    color: #fff;
-  }
-  
-  @media (min-width: 768px) {
-    .btn2 {
-      font-size: 1.125rem;
-      padding: 1rem 2rem;
-    }
-  }
-
-  .btn3{
-    margin-top: 20px;
-    background-color: #fff;
-    border: 0 solid #e2e8f0;
-    border-radius: 1.5rem;
-    box-sizing: border-box;
-    color: #0d172a;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1;
-    padding: 1rem 1.6rem;
-    text-align: center;
-    text-decoration: none #0d172a solid;
-    text-decoration-thickness: auto;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 45%;
-    margin-left: 30%;
-  }
-  
-  .btn3:hover{
-    background-color: #1e293b;
-    color: #fff;
-  }
-  
-  @media (min-width: 768px) {
-    .btn3 {
-      font-size: 1.125rem;
-      padding: 1rem 2rem;
-    }
-  }
-
-/* stylesheets/home.css */
-
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin: 0;
   padding: 0;
 }
 
-.container {
+.App {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  margin-bottom: 5%;
 }
 
 .logo {
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #4caf50; /* Green color for the logo */
+  color: black;
+  margin-right: 20%;
+  align-self: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Lora',serif;
 }
 
 .logout-btn {
-  margin-left: auto; /* Move the button to the right */
   padding: 10px;
-  background-color: #d9534f; /* Bootstrap's danger color */
+  background-color: #d9534f;
   color: white;
-  border: none;
+  border-radius: 5px ;
+  margin-left: 35%;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  align-self: flex-end; 
+
 }
 
-.logout-btn:hover {
-  background-color: #c9302c; /* Darker shade for hover effect */
+.user-address{
+  align-items: center;
+  margin-left: 5%;
+  width: 50%;
+  padding: 10px;
+  font-size: 25px;
+  font-family: bold;
 }
 
-.buttons {
+.options-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
 }
 
-form {
+.form1{
+  margin-left: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.head-label{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+.head-label2{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.btn-1{
+  height: 50px;
+  border-radius: 5px;
+  margin-left: 40%;
+  width: 100%;
+}
+
+.btn-2{
+  margin-left: 5%;
+  width:20%;
+  border-radius: 5px;
+}
+
+.btn-3{
+  margin-left: 5%;
+  width:25%;
+  border-radius: 5px;
+}
+
+.inputs{
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.inp{
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 2px;
+}
+
+.inp2{
+  border-radius: 5px;
+  height: 30px;
+  width: 50%;
+  margin-left: 5%;
+}
+
+.form2{
+  margin-left: 10%;
+}
+
+.form3{
+  margin-left: 10%;
+}
+
+.score{
+  font-size: 20px;
+  
+}
+
+.score-head{
+  margin-left: 10px;
+}
+
+/* .form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
   width: 300px;
-}
+  margin-bottom: 20px;
+} */
 
 label {
   margin-bottom: 10px;
@@ -186,17 +151,31 @@ input {
 
 button {
   padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
+  border: 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%; /* Full width for buttons */
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add some spacing between forms */
+.form + .form {
+  margin-top: 20px;
+}
+
+/* Hover effect for buttons */
 button:hover {
-  background-color: #45a049;
+  background-color: #1e293b;
+  color: #fff;
 }
 
-/* Additional styles for the page layout */
-
-
+@media (min-width: 768px) {
+  button {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}

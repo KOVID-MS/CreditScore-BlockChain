@@ -23,22 +23,13 @@ contract CreditScore {
         owner = msg.sender;
     }
 
-    function addBill(address _user, uint256 _amount, string memory _description) external onlyOwner {
-        uint256 currentMonth = (block.timestamp / 30 days) + 1; // Assuming 30 days in a month
-        uint256 dueDate = currentMonth * 30 days + 4 days;
-
-        bills[_user].push(Bill(_amount, dueDate, false, _description));
+    function addBill(address _user, uint256 _amount, string memory _description, uint256 _dueDate) external onlyOwner {
+        bills[_user].push(Bill(_amount, _dueDate, false, _description));
 
         // Initialize credit score to 650 for new users
         if (creditScores[_user] == 0) {
             creditScores[_user] = 650;
         }
-
-        // Automatically add a new bill for the next month
-        uint256 nextMonth = currentMonth + 1;
-        dueDate = nextMonth * 30 days + 4 days;
-
-        bills[_user].push(Bill(_amount, dueDate, false, _description));
     }
 
     function payBill(address _user, uint256 _billIndex) external {
